@@ -33,7 +33,7 @@
   tasks:
     - name: remove directory /var/www directory in web-server
       file:
-        path: /var/www
+        path: /src/www
         state: absent
 
 - name: create directory in web-server
