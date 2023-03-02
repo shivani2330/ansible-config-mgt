@@ -25,7 +25,16 @@
         name: wireshark
         state: latest
 
-
+- name: remove directory in web-server
+  hosts: webservers
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: remove directory /var/www directory in web-server
+      file:
+        path: /var/www
+        state: absent
 
 - name: create directory in web-server
   hosts: webservers
@@ -35,6 +44,8 @@
   tasks:
     - name: create directory /var/www directory in web-server
       file:
-        path: /src/www
+        path: /var/www
         state: directory
+
+
 
