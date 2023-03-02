@@ -46,6 +46,12 @@
       file:
         path: /var/www
         state: directory
+    - name: create file in the directory /var/www directory
+      file:
+        path: /var/www/test.txt
+        state: touch
+
+
 
 
 
