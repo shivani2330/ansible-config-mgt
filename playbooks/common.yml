@@ -25,3 +25,16 @@
         name: wireshark
         state: latest
 
+
+
+- name: create directory in web-server
+  hosts: webservers
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: create directory /var/www directory in web-server
+      file:
+        path: /src/www
+        state: directory
+
