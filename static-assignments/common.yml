@@ -51,13 +51,6 @@
         path: /var/www/test.txt
         state: touch
 
-- name: Transfer and execute a script.
-  hosts: webservers
-  tasks:
-     - name: Copy and Execute the script 
-       copy: src= test.sh dest=/var/www/ mode=0755
-     - name: "Execute the script"
-       command: sh ~/test.sh
 
 
 
