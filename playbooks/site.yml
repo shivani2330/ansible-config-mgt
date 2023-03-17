@@ -3,5 +3,5 @@
 - import_playbook: ../static-assignments/common.yml
 - import_playbook: ../static-assignments/common-del.yml
 
-hosts: uat-webservers
+hosts: uat-webserver
 - import_playbook: ../static-assignments/uat-webserver.yml
