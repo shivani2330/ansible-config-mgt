@@ -1,4 +1,5 @@
 ---
 - hosts: uat-webserver
+  become: true
   roles:
-    - role: 'webserver/task/main.yml'
+    - webserver
