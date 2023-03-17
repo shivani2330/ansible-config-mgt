@@ -1,4 +1,4 @@
 ---
-- hosts: uat-webserver
+- host: uat-webserver
   role:
      - webserver
