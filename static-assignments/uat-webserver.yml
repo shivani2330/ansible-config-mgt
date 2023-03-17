@@ -1,5 +1,4 @@
----
 - hosts: uat-webserver
   become: true
   roles:
-    - \ansible-config-mgt\roles\webserver\task\main.yml
+    - webserver
